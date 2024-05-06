@@ -1,0 +1,33 @@
+---
+const socials = [
+    {
+        name: "Github",
+        url: "https://www.github.com/cairocampos",
+        icon: "/socials/github.svg",
+    },
+    {
+        name: "Instagram",
+        url: "https://www.instagram.com/cairocampos98",
+        icon: "/socials/instagram.svg",
+    },
+    {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/cairo-campos-a369b2174/",
+        icon: "/socials/linkedin.svg",
+    },
+    {
+        name: "Whatsapp",
+        url: "https://wa.me/5533991409852",
+        icon: "/socials/whatsapp.svg",
+    },
+]
+---
+
+<div class="grid md:grid-cols-4 gap-16 md:gap-8 bg-zinc-50 rounded-lg w-full p-8 mt-16">
+    {socials.map(social => (
+        <a class="text-center" title={social.name} href={social.url} target="_blank" rel="noreferrer">
+            <img src={social.icon} alt={social.name} class="h-10 w-10 mx-auto mb-2" />
+            {social.name}
+        </a>
+    ))}
+</div>
